@@ -133,7 +133,7 @@ module.exports = {
   }
 }
 ```
-postcss-loader会在文件中遍历查找这个配置文件，所以不需要手动配置路径查找，采用默认的方式就好，当然也支持指定路径，需要在webpack.base.config.js中配置，这个看[postcss-loader](https://github.com/postcss/postcss-loader)文档
+postcss-loader会在文件中遍历查找这个配置文件，所以不需要手动配置路径查找，采用默认的方式就好，当然也支持指定路径，需要在webpack.base.config.js中配置，关于文档请看[postcss-loader](https://github.com/postcss/postcss-loader)文档
 
 webpack.base.config.js
 ```js
@@ -156,7 +156,7 @@ HelloWorld.vue
   <div class="main">
     <Hello></Hello>
     <ImgIn></ImgIn>
-    <!-- <IconIn></IconIn> -->
+    <IconIn></IconIn>
     <mixIn></mixIn>
   </div>
 </template>
@@ -189,8 +189,14 @@ export default {
   font-size: 14px;
   font-family: '微软雅黑'
 }
+.hello {
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  overflow: hidden;
+}
 
 </style>
+
 
 ```
 Hello.vue
@@ -254,12 +260,12 @@ a{
 }
 
 ```
-在每个vue组件中，应用了独立的样式，这样可以做到组件间样式分离，彼此不影响，如果你之前用过Sass，一定知道Sass是实现不了样式分离的，比如说在一个组件样式里定义了a属性，会泛滥到全局，我通常的解决方案是为每个组件定义一个特殊不重复的id，然后所有的样式嵌套在id下，这样不会泛滥到全局，这是对于开发经验久的人比较管用。在多人协同开发，经常会碰到一个实习生，或者开发经验1年所有的新手，会在组件样式里写类似.content这种重名风险高的类名，恰好你也在自己的组件中定义了#dashboard .content，这样别的组件的.content样式会继承过来，会导致整个页面样式乱掉，所以总结来说，PostCss在这方面处理的还是非常好的。
+在每个vue组件中，引用了独立的样式，这样可以做到组件间样式分离，彼此不影响，如果你之前用过Sass，一定知道Sass是实现不了样式分离的。比如说在一个组件样式里定义了a类名，会泛滥到全局，我通常的解决方案是为每个组件定义一个特殊不重复的id，然后所有的样式嵌套在id下，这样不会泛滥到全局，这是对于开发经验久的人比较管用。在多人协同开发，经常会碰到一个实习生，或者开发经验1年所有的新手，会在组件样式里写类似.content这种重名风险高的类名，恰好你也在自己的组件中定义了#dashboard .content，这样别的组件的.content样式会继承过来，会导致整个页面样式乱掉，所以总结来说，PostCss在这方面处理的还是非常好的。
 
-于是执行npm run dev，你会看到样式已经加载进了页面，当你改动css文件的内容，webpack也会实时进行监听，不需要重新编译。
+于是执行npm run dev，你会看到所有样式已经加载进了页面，当你改动css文件的内容，webpack也会实时进行监听，不需要重新编译。
 
 ### 更改引入路径
-之前每个组件的样式文件，路径引入都是在根目录下，'./src/assets/css/XXX.css',现在为了统一引入的方便，我们把入口改下，
+之前每个组件引入的样式文件，路径都是在根目录下，'./src/assets/css/XXX.css',现在为了统一引入的方便，我们把入口改下，
 
 postcss.config.js
 ```js
@@ -282,7 +288,7 @@ module.exports = {
 
 
 ```
-看到from字段，改成一个'./src/assets/css/main.css'文件，这个文件可以作为所有样式文件的入口，相应的其他vue文件的引入也要改成
+看到from字段，改成一个'./src/assets/css/main.css'文件，这个文件可以作为所有样式文件的入口，相应的所有vue文件的样式引入路径都要改
 
 Hello.vue
 ```vue
@@ -319,7 +325,7 @@ export default {
 @import './hello/hello.css'
 </style>
 ```
-可以看到文件Hello.vue组件引入样式文件，变更为'./hello/hello.css'
+可以看到文件Hello.vue组件引入样式文件路径，变更为'./hello/hello.css'
 
 ### 引入import
 最重要的一点就是如果引用一个以上文件的话，尾部一定加上分号，否则解析不了
@@ -352,7 +358,7 @@ export default {
 }
 ```
 ### 引入url
-postcss-url插件，是定义了rebase,inline,copy三种模式，在本文中，我们采用inline模式,"postcss-url": { url: 'inline' }
+postcss-url插件，是定义了rebase，inline，copy三种模式，在本文中，我们采用inline模式，"postcss-url": { url: 'inline' }
 
 inline模式，是从vue组件的位置作为根目录，定义url，路径定义准确的话，解析后会通过webpack对图片进行base64的转化。
 
@@ -417,8 +423,8 @@ $column: 200px;
 }
 ```
 ### 引入自定义@font-face规则
-需要安装postcss-font-magician插件，并把它写入到插件配置postcss.config.js,
-自定义font-face规则，需要定义一个名字，并把字体所在的路径写入，css文件中引入定义的名字，下面定义了一个icomoon名字。
+需要安装postcss-font-magician插件，并把它写入到插件配置postcss.config.js中。
+自定义@font-face规则，需要定义一个名字，并把字体所在的路径写入，css文件中引入定义的名字，下面定义了一个icomoon名字。
 
 postcss.config.js
 ```js
