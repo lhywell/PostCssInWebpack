@@ -1,0 +1,198 @@
+@charset "utf-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix {
+    display: block;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $font-family;
+    background-color: #f8f8f9;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #909090;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #909090;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #909090;
+}
+
+input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #909090!important;
+}
+.fl {
+    float: left;
+}
+.rl {
+    float: right;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.mr30 {
+    margin-right: 30px;
+}
+.ml40 {
+    margin-left: 40px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.fs14 {
+    font-size: 14px
+}
+.center-left {
+    float: left;
+}

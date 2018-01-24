@@ -1,0 +1,12 @@
+
+@import "./common/variables.css";
+
+@import './common/public.css';
+
+/*@import './common/mixins/common.css';*/
+
+/*@import "common/public"*/
+/*$blue: "#056ef0";
+.pink{
+  color:$blue;
+}*/

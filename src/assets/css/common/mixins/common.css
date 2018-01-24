@@ -1,0 +1,14 @@
+@mixin left-icon() {
+    color: $icon;
+    font-size: $font25;
+}
+
+@mixin tool-icon-white() {
+    color: $white;
+    font-size: $font16;
+}
+
+@mixin tool-icon() {
+    color: $font-color1;
+    font-size: $font16;
+}

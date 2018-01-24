@@ -1,0 +1,56 @@
+.hello {
+  margin: 10px 0;
+}
+.var,
+.auto,
+.nested,
+.mix {
+  margin: 10px 0;
+}
+.nested {
+  ul {
+    li {
+      margin: 4px 0;
+    }
+  }
+}
+.auto {
+  .item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #c0c0c0;
+    line-height: 20px;
+  }
+}
+$dir: top;
+$blue: #056ef0;
+$column: 200px;
+
+.menu_link {
+  background: $blue;
+  width: $column;
+}
+.menu {
+  width: calc(4 * $column);
+  margin-$(dir): 10px;
+}
+
+
+.delta {
+  color: #ffffff;
+  background: gray;
+}
+
+.charlie {
+  @extend .delta;
+  font-weight: bold;
+}
+.alpha {
+  @extend .bravo;
+  color: red;
+}
+.bravo {
+  @extend .charlie;
+  background: blue;
+}

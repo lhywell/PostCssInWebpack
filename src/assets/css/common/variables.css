@@ -1,0 +1,54 @@
+$font-family:"Helvetica Neue",
+Helvetica,
+"PingFang SC",
+"Hiragino Sans GB",
+"Microsoft YaHei",
+"微软雅黑",
+Arial,
+sans-serif;
+
+$gray-cc:#cccccc;
+$gray-e6:#e6e6e6;
+$gray-ed:#ededed;
+$gray-73:#737373;
+$gray-77:#777777;
+$black:#000000;
+$white:#ffffff;
+
+$header-bg-color:#1A79EA;
+
+$font-color1:rgba(28, 36, 56, 0.56);
+$font-color2:rgba(28, 36, 56, 0.8);
+$font-color3:rgba(28, 36, 56, 0.9);
+$font-color4:rgba(28, 36, 56, 1);
+$font-active:#2D8CF0;
+
+$font12:12px;
+$font14:14px;
+$font16:16px;
+$font18:18px;
+$font20:20px;
+$font22:22px;
+$font25:25px;
+
+$bg:rgba(28, 36, 56, 0.03);
+$mapbg:rgba(45, 140, 240, 0.12);
+$mapbg-active:rgba(95, 190, 90, 0.08);
+
+$border:#edeeef;
+$border2:#D4D6D9;
+$map-border:#2D8CF0;
+$map-border-active:#5FBE5A;
+
+$line:#2D8CF0;
+
+$button:#43A3FB;
+
+$icon:rgba(255, 255, 255, 0.64);
+
+$radius3:3px;
+$radius4:4px;
+$radius8:8px;
+
+$fl:left;
+$fr:right;
