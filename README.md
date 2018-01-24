@@ -21,7 +21,7 @@ npm install -g postcss-cli
 ```node
 npm install --save-dev postcss-cli
 ```
-安装完了就可以看下postcss可执行哪些命令
+安装完了就可以看下PostCSS可执行哪些命令
 ```js
 // 1. 先看下这个命令有哪些参数可以用
 postcss --help
@@ -63,6 +63,7 @@ Please specify at least one plugin name.
 - Nested classes
 - Mixins
 - Autoprefixing
+- 自定义@font-face
 
 为了获得这些功能，你需要安装相关的模块：
 
@@ -80,6 +81,8 @@ https://github.com/postcss/autoprefixer
 
 https://github.com/postcss/postcss-url
 
+https://github.com/michael-ciniawsky/postcss-load-config
+
 https://github.com/jonathantneal/postcss-font-magician
 
 注意：插件提供了与 Sass 几乎相同的语法,但有一些语法略微不同(比如 postcss-mixins 更强大)，所以更多信息请在上面的页面中确认。
@@ -89,11 +92,11 @@ https://github.com/jonathantneal/postcss-font-magician
 npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-nested postcss-font-magician
 ```
 
-安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested这些内容
+安装完后，你会发现在package.json中devDependencies字段增加了autoprefixer、style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested、postcss-mixins、postcss-font-magician这些内容
 
 ### PostCSS在webpack中的配置
 
-通过vue-cli构建的vue应用集成了webpack的基础配置，你需要找到build/webpack.base.conf.js中module/rules增加
+通过vue-cli构建的vue应用集成了webpack的基础配置，你需要找到build/webpack.base.conf.js中module/rules中增加如下配置：
 
 webpack.base.conf.js
 ```webpack
@@ -109,7 +112,7 @@ webpack.base.conf.js
   ]
 },
 ```
-postcss-loader有一个配置文件postcss.config.js，然后新建一个postcss.config.js文件，统一管理插件需要把之前安装的包放到plugins里面，并且采用默认配置，默认配置就是空对象，不使用某个插件就是false，没有在配置文件里声明的插件是不会生效的，所以配置文件很重要，每个插件也可以定义option，关于插件的option配置需要查询每个插件自定义的配置，关于配置文件[postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config)
+postcss-loader默认会去查找一个配置文件postcss.config.js，然后需要新建一个postcss.config.js文件。统一管理插件需要把之前安装的包放到plugins里面，并且采用默认配置，默认配置就是每个插件的value值为空对象，不使用某个插件就是false，没有在配置文件里声明的插件是不会生效的，所以配置文件很重要，每个插件也可以定义option，关于插件的option配置需要查询每个插件自定义的配置，关于配置文件说明请看[postcss-load-config](https://github.com/michael-ciniawsky/postcss-load-config)
 
 postcss.config.js
 ```js
@@ -132,6 +135,7 @@ module.exports = {
 ```
 postcss-loader会在文件中遍历查找这个配置文件，所以不需要手动配置路径查找，采用默认的方式就好，当然也支持指定路径，需要在webpack.base.config.js中配置，这个看[postcss-loader](https://github.com/postcss/postcss-loader)文档
 
+webpack.base.config.js
 ```js
 {
   loader: 'postcss-loader',
