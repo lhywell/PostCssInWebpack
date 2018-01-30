@@ -260,7 +260,7 @@ a{
 }
 
 ```
-在每个vue组件中，通过定义可选的[scoped](https://cn.vuejs.org/v2/guide/comparison.html#%E7%BB%84%E4%BB%B6%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%86%85%E7%9A%84-CSS)属性，可以生成单文件组件作用域，每个vue引用了独立的样式，这样可以做到组件间样式分离，彼此不影响。当然也可以采用css-modules的方式，用module替换scoped。
+在每个vue组件中，通过定义可选的[scoped](https://cn.vuejs.org/v2/guide/comparison.html#%E7%BB%84%E4%BB%B6%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%86%85%E7%9A%84-CSS)属性，可以生成单文件组件作用域，每个vue引用了独立的样式，这样可以做到组件间样式分离，彼此不影响。当然也可以采用[css-modules](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)的方式，用module替换scoped。
 
 在开发中经常碰到样式全局泛滥的情况，比如说在一个组件样式里定义了a类名，会泛滥到全局，我通常的解决方案是为每个组件定义一个特殊不重复的id，然后所有的样式嵌套在id下，这样不会泛滥到全局，这是对于开发经验久的人比较管用。在多人协同开发，经常会碰到一个实习生，或者开发经验1年所有的新手，会在组件样式里写类似.content这种重名风险高的类名，恰好你也在自己的组件中定义了#dashboard .content，这样别的组件的.content样式会继承过来，会导致整个页面样式乱掉，所以总结来说，我推荐在样式中定义scoped。
 
