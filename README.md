@@ -337,9 +337,9 @@ export default {
 ```
 
 ### 引入autoprefix
-因为我们加入了post-cssnext插件，可以支持自动补充前缀，试下
+因为我们加入了postcss-cssnext插件，可以支持自动补充前缀，试下
 
-注意：post-cssnext内部有autoprefixer插件的，也就不需要安装autoprefixer.
+注意：postcss-cssnext内部有autoprefixer插件的，也就不需要安装autoprefixer.
 ```bash
 postcss-cssnext found a duplicate plugin ('autoprefixer') in your postcss plugins. This might be inefficient. You should remove 'autoprefixer' from your postcss plugin list since it's already included by postcss-cssnext.
 Note: If, for a really specific reason, postcss-cssnext warnings are irrelevant for your use case, and you really know what you are doing, you can disable this warnings by setting  'warnForDuplicates' option of postcss-cssnext to 'false'.
