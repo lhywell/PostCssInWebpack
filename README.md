@@ -77,8 +77,6 @@ https://github.com/postcss/postcss-nested
 
 https://github.com/postcss/postcss-mixins
 
-https://github.com/postcss/autoprefixer
-
 https://github.com/postcss/postcss-url
 
 https://github.com/michael-ciniawsky/postcss-load-config
@@ -92,7 +90,7 @@ https://github.com/jonathantneal/postcss-font-magician
 npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-nested postcss-font-magician
 ```
 
-安装完后，你会发现在package.json中devDependencies字段增加了autoprefixer、style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested、postcss-mixins、postcss-font-magician这些内容
+安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested、postcss-mixins、postcss-font-magician这些内容
 
 ### PostCSS在webpack中的配置
 
@@ -122,7 +120,6 @@ module.exports = {
   from: '',
   to: '',
   plugins: {
-    "autoprefixer": {},
     "postcss-import": {},
     "postcss-simple-vars": {},
     "postcss-extend": {},
@@ -279,7 +276,6 @@ module.exports = {
   from: './src/assets/css/main.css',
   to: '',
   plugins: {
-    "autoprefixer": {},
     "postcss-import": {},
     "postcss-simple-vars": {},
     "postcss-extend": {},
@@ -341,7 +337,14 @@ export default {
 ```
 
 ### 引入autoprefix
-因为我们加入了autoprefixer插件，可以支持自动补充前缀，试下
+因为我们加入了post-cssnext插件，可以支持自动补充前缀，试下
+
+注意：post-cssnext内部有autoprefixer插件的，也就不需要安装autoprefixer.
+```bash
+postcss-cssnext found a duplicate plugin ('autoprefixer') in your postcss plugins. This might be inefficient. You should remove 'autoprefixer' from your postcss plugin list since it's already included by postcss-cssnext.
+Note: If, for a really specific reason, postcss-cssnext warnings are irrelevant for your use case, and you really know what you are doing, you can disable this warnings by setting  'warnForDuplicates' option of postcss-cssnext to 'false'.
+```
+
 ```css
 .item {
   display: flex;
@@ -438,7 +441,6 @@ module.exports = {
   from: './src/assets/css/main.css',
   to: '',
   plugins: {
-    "autoprefixer": {},
     "postcss-import": {},
     "postcss-simple-vars": {},
     "postcss-extend": {},
