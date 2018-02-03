@@ -540,4 +540,25 @@ icon.css
 }
 ```
 ### 引入mix
-mix用法，变动是最大的
+mix用法，功能强大了很多，支持变量引入
+
+```css
+@define-mixin tag-bg {
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+.tag {
+    @mixin tag-bg
+}
+```
+解析后
+```
+.tag {
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+```
