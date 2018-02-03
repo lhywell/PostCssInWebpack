@@ -79,6 +79,8 @@ https://github.com/postcss/postcss-mixins
 
 https://github.com/postcss/postcss-url
 
+https://github.com/MoOx/postcss-cssnext
+
 https://github.com/michael-ciniawsky/postcss-load-config
 
 https://github.com/jonathantneal/postcss-font-magician
@@ -87,10 +89,10 @@ https://github.com/jonathantneal/postcss-font-magician
 
 然后用一行命令安装它们：
 ```node
-npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-nested postcss-font-magician
+npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-cssnext postcss-nested postcss-font-magician
 ```
 
-安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested、postcss-mixins、postcss-font-magician这些内容
+安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested、postcss-cssnext、postcss-mixins、postcss-font-magician这些内容
 
 ### PostCSS在webpack中的配置
 
@@ -337,7 +339,8 @@ export default {
 ```
 
 ### 引入autoprefix
-因为我们加入了postcss-cssnext插件，可以支持自动补充前缀，试下
+[cssnext](http://cssnext.io/) 插件允许开发人员在当前的项目中使用 CSS 将来版本中可能会加入的新特性。cssnext 负责把这些新特性转译成当前浏览器中可以使用的语法，
+这些新特性也可以用在postcss中，postcss-cssnext插件已经包含了对 Autoprefixer 的使用，因此使用了 cssnext 就不再需要使用 Autoprefixer。，试下
 
 注意：postcss-cssnext内部有autoprefixer插件的，也就不需要安装autoprefixer.
 ```bash
