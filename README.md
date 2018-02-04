@@ -341,7 +341,34 @@ export default {
 ### 引入autoprefix
 [postcss-cssnext](http://cssnext.io/) 是一个PostCSS插件，它帮助您使用最新的CSS语法。它将新的CSS规范转换为更兼容的CSS，因此您不需要等待浏览器的支持。您可以编写未来的CSS代码。
 
-postcss-cssnext插件已经包含了对 Autoprefixer 的使用，因此使用了 cssnext 就不再需要使用 Autoprefixer。可以打个比方，cssnext相当于Js ES6 + Babel，支持新特性和编译，试下
+postcss-cssnext插件目前包含了25个特性，以后还会增加：
+1. [autoprefixer](https://github.com/postcss/postcss-custom-properties)
+2. [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
+3. [postcss-apply](https://github.com/pascalduez/postcss-apply)
+4. [postcss-calc](https://github.com/postcss/postcss-calc)
+5. [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
+6. [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax)
+7. [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors)
+8. [postcss-nesting](https://github.com/jonathantneal/postcss-nesting)(注意不是postcss-nested)
+9. [postcss-image-set-polyfill](https://github.com/SuperOl3g/postcss-image-set-polyfill)
+10. [postcss-color-function](https://github.com/postcss/postcss-color-function)
+11. [postcss-color-hwb](https://github.com/postcss/postcss-color-hwb)
+12. [postcss-color-gray](https://github.com/postcss/postcss-color-gray)
+13. [postcss-color-hex-alpha](https://github.com/postcss/postcss-color-hex-alpha)
+14. [postcss-color-rgba-fallback](https://github.com/postcss/postcss-color-rgba-fallback)
+15. [postcss-color-rebeccapurple](https://github.com/postcss/postcss-color-rebeccapurple)
+16. [postcss-font-variant](https://github.com/postcss/postcss-font-variant)
+17. [postcss-initial](https://github.com/maximkoretskiy/postcss-initial)
+18. [node-pixrem](https://github.com/robwierzbowski/node-pixrem)
+19. [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link)
+20. [postcss-selector-NOT](https://github.com/postcss/postcss-selector-NOT)
+21. [ostcss-pseudoelements](https://github.com/axa-ch/postcss-pseudoelements)
+22. [postcss-replace-overflow-wrap](https://github.com/MattDiMu/postcss-replace-overflow-wrap)
+23. [postcss-attribute-case-insensitive](https://github.com/Semigradsky/postcss-attribute-case-insensitive)
+24. [postcss-color-hsl](https://github.com/dmarchena/postcss-color-hsl)
+25. [postcss-font-family-system-ui](https://github.com/JLHwung/postcss-font-family-system-ui)
+
+可以打个比方，cssnext相当于Js ES6 + Babel，支持新特性和编译，试下
 
 注意：postcss-cssnext内部有autoprefixer插件的，也就不需要安装autoprefixer.
 ```bash
