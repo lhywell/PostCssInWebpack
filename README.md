@@ -7,7 +7,7 @@
 - webpack版本:3.6.0
 
 -------------------
-PostCSS 最强大之处在于它是模块化并且基于插件的架构，不过这也是个缺点。如果你之前在项目中使用 Sass/Less/Stylus (比如大多数的设计师和前端开发者)，你从不需要配置任何东西——它们内置了全部实用功能，开箱即用。然而，PostCSS 需要你做一些配置。你不得不从一眼看不到底的插件列表选择插件,
+PostCSS 比LESS和Stylecow快一点，而且比Myth或Ruby Sass快得多。PostCSS最强大之处在于它是模块化并且基于插件的架构，不过这也是个缺点。如果你之前在项目中使用 Sass/Less/Stylus (比如大多数的设计师和前端开发者)，你从不需要配置任何东西——它们内置了全部实用功能，开箱即用。然而，PostCSS 需要你做一些配置。你不得不从一眼看不到底的插件列表选择插件,
 
 ### 运行PostCSS
 运行PostCSS的方法有很多种。你可以很容易地将它添加到 Gulp 或 Webpack 的构建过程中；但是这篇指南中，我们要让事情尽可能简单，我们将使用 PostCSS 的 CLI。大多数人需要像这样全局安装它：
@@ -339,8 +339,9 @@ export default {
 ```
 
 ### 引入autoprefix
-[cssnext](http://cssnext.io/) 插件允许开发人员在当前的项目中使用 CSS 将来版本中可能会加入的新特性。cssnext 负责把这些新特性转译成当前浏览器中可以使用的语法，
-这些新特性也可以用在postcss中，postcss-cssnext插件已经包含了对 Autoprefixer 的使用，因此使用了 cssnext 就不再需要使用 Autoprefixer。，试下
+[postcss-cssnext](http://cssnext.io/) 是一个PostCSS插件，它帮助您使用最新的CSS语法。它将新的CSS规范转换为更兼容的CSS，因此您不需要等待浏览器的支持。您可以编写未来的CSS代码。
+
+postcss-cssnext插件已经包含了对 Autoprefixer 的使用，因此使用了 cssnext 就不再需要使用 Autoprefixer。可以打个比方，cssnext相当于Js ES6 + Babel，支持新特性和编译，试下
 
 注意：postcss-cssnext内部有autoprefixer插件的，也就不需要安装autoprefixer.
 ```bash
