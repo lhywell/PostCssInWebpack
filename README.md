@@ -362,7 +362,7 @@ postcss-cssnext插件目前包含了25个特性，以后还会增加：
 18. [node-pixrem](https://github.com/robwierzbowski/node-pixrem)
 19. [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link)
 20. [postcss-selector-NOT](https://github.com/postcss/postcss-selector-NOT)
-21. [ostcss-pseudoelements](https://github.com/axa-ch/postcss-pseudoelements)
+21. [postcss-pseudoelements](https://github.com/axa-ch/postcss-pseudoelements)
 22. [postcss-replace-overflow-wrap](https://github.com/MattDiMu/postcss-replace-overflow-wrap)
 23. [postcss-attribute-case-insensitive](https://github.com/Semigradsky/postcss-attribute-case-insensitive)
 24. [postcss-color-hsl](https://github.com/dmarchena/postcss-color-hsl)
