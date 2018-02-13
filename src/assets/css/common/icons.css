@@ -1,113 +1,23 @@
-.hello{
-  height: 40px
-}
 [class^="icon-"],
 [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/*工具栏*/
-
-.icon-circle:before {
-    content: "\e903";
-    @include tool-icon;
-    margin-right: 8px;
-}
 
 .icon-polygon::before {
-    content: "\e90e";
-     font-size: 22px;
-    color: #000;
-    margin-right: 8px;
-}
-
-.icon-upload:before {
-    content: "\e912";
-    @include tool-icon;
-    margin-right: 8px;
-}
-
-.icon-driving:before {
-    content: "\e907";
-    @include tool-icon;
-    margin-right: 8px;
-}
-
-.icon-sudoku:before {
-    content: "\e911";
-    @include tool-icon;
-    margin-right: 8px;
-}
-
-/*左边栏*/
-
-.icon-face:before {
-    content: "\e909";
-    @include left-icon;
-}
-
-.icon-flow:before {
-    content: "\e90c";
-    @include left-icon;
-}
-
-.icon-drive:before {
-    content: "\e906";
-    @include left-icon;
-}
-
-.icon-address:before {
-    content: "\e900";
-    @include left-icon;
-}
-
-
-/*个人中心*/
-
-.icon-center:before {
-    content: "\e902";
-    font-size: 22px;
-    color: #fff;
-    margin-right: 12px;
-}
-
-.icon-data:before {
-    content: "\e904";
-}
-
-.icon-delete:before {
-    content: "\e905";
-}
-
-.icon-edit:before {
-    content: "\e908";
-}
-
-.icon-float:before {
-    content: "\e90b";
-}
-
-.icon-house:before {
-    content: "\e90d";
-    color: #fff;
-}
-
-.icon-search:before {
-    content: "\e90f";
-    color: #fff;
-}
-
-.icon-share:before {
-    content: "\e910";
+  content: "\e90e";
+  font-size: 22px;
+  color: #000;
+  margin-right: 8px;
 }

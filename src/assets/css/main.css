@@ -3,10 +3,19 @@
 
 @import './common/public.css';
 
-/*@import './common/mixins/common.css';*/
+@import './common/variables_next.css';
 
-/*@import "common/public"*/
-/*$blue: "#056ef0";
-.pink{
-  color:$blue;
-}*/
+
+/*全局变量*/
+$red: #ff0000;
+
+.link{
+  color:$red;
+}
+
+@define-mixin eTag {
+  border-radius: 50%;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}

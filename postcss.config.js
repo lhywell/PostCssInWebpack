@@ -4,13 +4,32 @@ module.exports = {
   from: './src/assets/css/main.css',
   to: '',
   plugins: {
-    "autoprefixer": {},
     "postcss-import": {},
     "postcss-simple-vars": {},
     "postcss-extend": {},
+
     "postcss-nested": {},
     "postcss-mixins": {},
-    "postcss-cssnext": {},
+    "postcss-cssnext": {
+      browsers: ['last 2 versions', '> 5%'],
+      features: {
+        customProperties: {
+          preserve: true,
+          variables: {},
+          appendVariables: true
+        },
+        applyRule: {
+          preserve: true,
+          sets: {
+            'toolbar-theme': {
+              backgroundColor: 'rebeccapurple',
+              color: 'white',
+              border: '1px solid green',
+            }
+          }
+        }
+      }
+    },
     "postcss-font-magician": {
       custom: {
         'icomoon': {
@@ -29,6 +48,7 @@ module.exports = {
         }
       }
     },
-    "postcss-url": { url: 'inline' }
+    "postcss-url": { url: 'inline' },
+    // "postcss-modules": {}
   }
 }

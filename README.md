@@ -368,7 +368,7 @@ postcss-cssnext插件目前包含了25个特性，以后还会增加：
 24. [postcss-color-hsl](https://github.com/dmarchena/postcss-color-hsl)
 25. [postcss-font-family-system-ui](https://github.com/JLHwung/postcss-font-family-system-ui)
 
-可以打个比方，cssnext相当于Js ES6 + Babel，支持新特性和编译，试下
+可以打个比方，cssnext相当于Js ES6 + Babel，支持新特性和编译。使用这些新的特性，需要在[options](https://github.com/MoOx/postcss-cssnext/blob/master/src/features.js)里面配置
 
 注意：postcss-cssnext内部有autoprefixer插件的，也就不需要安装autoprefixer.
 ```bash

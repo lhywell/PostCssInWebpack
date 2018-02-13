@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
     <div class="item">
-      <span>支持png图片</span><img src="../assets/images/logo.png" width="40" height="40">
+      <span>支持png图片</span><img src="../../assets/images/logo.png" width="40" height="40">
     </div>
     <div class="item">
-      <span>支持svg图片</span><img src="../assets/images/icon-square-big.svg" width="40" height="40">
+      <span>支持svg图片</span><img src="../../assets/images/icon-square-big.svg" width="40" height="40">
     </div>
     <div class="item">
       <span>支持背景</span><span class="bg"></span>

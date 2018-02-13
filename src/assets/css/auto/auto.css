@@ -1,0 +1,10 @@
+.hello {}
+
+.auto {}
+.item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #c0c0c0;
+  line-height: 20px;
+}
