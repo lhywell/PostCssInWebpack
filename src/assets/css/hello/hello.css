@@ -1,18 +1,14 @@
 /*文件内部是隔离的，随便定义类名*/
-.hello {
-  padding:0 0 20px 0;
-}
-h1{
-  font-size: 14px;
-  font-family: '微软雅黑'
-}
+
+.hello {}
+h1 {}
 ul {
   list-style: none;
   li {
-    padding-left:20px;
+    padding-left: 20px;
     line-height: 20px;
   }
 }
-a{
+a {
   color: red
 }

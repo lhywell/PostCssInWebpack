@@ -1,13 +1,13 @@
 <template>
   <div class="hello">
-    <div class="cssnext">cssnext用法：</div>
+    <h2>cssnext</h2>
     <ul>
       <li>
         <div class="title">1.变量用法</div>
         <div class="detail">内容</div>
       </li>
       <li>
-        <div>2.apply用法</div>
+        <div>2.@apply用法</div>
         <div class="Toolbar">内容</div>
       </li>
     </ul>
@@ -35,7 +35,9 @@ ul {
   }
 }
 
+
 /*在variables_next.css里面定义*/
+
 .title {
   color: var(--color-title);
 }
@@ -44,7 +46,9 @@ ul {
 }
 
 
+
 /*在postcss.config.js里面定义*/
+
 .Toolbar {
   @apply --toolbar-theme;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <div class="var">变量用法：$variable定义键，冒号后边定义值，$variable进行引用
-    </div>
+    <h2>Variable</h2>
+    <h3>$variable定义键，冒号后边定义值，$variable进行引用</h3>
     <div class="menu">menu</div>
     <div class="menu_link">menu</div>
   </div>

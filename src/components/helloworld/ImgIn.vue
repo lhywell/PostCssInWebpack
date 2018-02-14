@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <h2>图片</h2>
     <div class="item">
       <span>支持png图片</span><img src="../../assets/images/logo.png" width="40" height="40">
     </div>

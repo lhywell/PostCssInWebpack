@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
+    <h2>支持自定义@font-face规则</h2>
     <div class="ii">
-      <span>支持自定义@font-face规则</span><span class="icon-polygon"></span>
+      <span class="icon-polygon"></span>
     </div>
   </div>
 </template>
@@ -19,4 +20,5 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import './common/icons.css'
+
 </style>

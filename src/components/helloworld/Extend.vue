@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <div>extend用法：@extend引用一个类名</div>
+    <h2>Extend</h2>
+    <h3>@extend引用一个类名</h3>
     <span class="delta">extend</span>
     <span class="bravo">extend</span>
     <span class="alpha">extend</span>
@@ -53,6 +54,7 @@ ul {
     }
   }
 }
+
 
 
 /*main.css定义的全局变量*/

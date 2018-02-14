@@ -1,13 +1,69 @@
-:global .page {
-    padding: 20px;
+:global(.page) {
+  color: #666;
+}
+
+@value colors: "@/assets/css/module/color.css";
+@value blue from colors;
+
+$font16: 16px;
+$bold:bold;
+$mb:10px;
+$line-h:26px;
+
+
+
+
+/*变量用法*/
+
+@define-mixin h1 {
+  font-size: $font16;
+  font-weight: $bold;
+  margin-bottom: $mb;
+}
+
+
+
+
+/*@mixin用法*/
+
+.h1 {
+  @mixin h1;
+}
+
+
+
+/*@value用法*/
+
+.value {
+  color: blue;
 }
 
 .title {
-    /*composes: title from "./mixin.css";*/
-    color: green;
-    font-size: 16px;
+  composes: title from "@/assets/css/module/mixin.css";
+  color: green;
+  font-size: 16px;
 }
 
 .article {
-    font-size: 12px;
+  font-size: 12px;
+  composes: title;
+}
+
+
+
+/*module方式,即使嵌套定义a，@extend还是会泛滥到全局*/
+
+.text {
+  text-decoration: none;
+  color: #35a1d4;
+}
+
+.ul {
+  li {
+    line-height: $line-h;
+    a {
+      font-weight: bold;
+      @extend .text;
+    }
+  }
 }

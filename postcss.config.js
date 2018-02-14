@@ -7,7 +7,6 @@ module.exports = {
     "postcss-import": {},
     "postcss-simple-vars": {},
     "postcss-extend": {},
-
     "postcss-nested": {},
     "postcss-mixins": {},
     "postcss-cssnext": {

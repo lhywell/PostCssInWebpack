@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <div class="mix">mix用法：@define-mixin定义，@mixin引用
-    </div>
+    <h2>Mixin</h2>
+    <h3>@define-mixin定义，@mixin引用</h3>
     <div>
       <span class="a"></span>
       <span class="b"></span>

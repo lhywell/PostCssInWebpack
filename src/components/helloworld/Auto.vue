@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <div class="auto">autoprefix用法：安装了postcss-cssnext，里面包含autoprefix
-    </div>
+    <h2>Autoprefix</h2>
+    <h3>安装了postcss-cssnext，里面包含autoprefix</h3>
     <div class="item">item</div>
   </div>
 </template>

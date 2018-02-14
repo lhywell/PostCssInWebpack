@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <div class="nested">嵌套用法：
+    <h2>Nested</h2>
+    <div class="nested">
       <ul>
         <li>
           <div><a href="">1.Less</a></div>
