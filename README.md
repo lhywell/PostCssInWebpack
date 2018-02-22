@@ -6,6 +6,12 @@
 - node版本：8.9.4
 - webpack版本:3.6.0
 
+### 安装
+
+```node
+npm install
+npm run dev
+```
 -------------------
 PostCSS 比LESS和Stylecow快一点，而且比Myth或Ruby Sass快得多。PostCSS最强大之处在于它是模块化并且基于插件的架构，不过这也是个缺点。如果你之前在项目中使用 Sass/Less/Stylus (比如大多数的设计师和前端开发者)，你从不需要配置任何东西——它们内置了全部实用功能，开箱即用。然而，PostCSS 需要你做一些配置。你不得不从一眼看不到底的插件列表选择插件,
 
