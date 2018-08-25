@@ -406,9 +406,13 @@ Note: If, for a really specific reason, postcss-cssnext warnings are irrelevant 
 }
 ```
 ### postcss-preset-env 替换掉 postcss-cssnext
+
 [postcss-preset-env](https://preset-env.cssdb.org/)(https://cssdb.org/)
+
 废弃的过程：https://moox.io/blog/deprecating-cssnext/
+
 postcss-preset-env 中包含autoprefixer 和browers
+
 postcss-preset-env默认是stage2
 ### 引入url
 postcss-url插件，是定义了rebase，inline，copy三种模式，在本文中，我们采用inline模式，"postcss-url": { url: 'inline' }
