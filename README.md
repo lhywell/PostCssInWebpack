@@ -85,7 +85,9 @@ https://github.com/postcss/postcss-mixins
 
 https://github.com/postcss/postcss-url
 
-https://github.com/MoOx/postcss-cssnext
+https://github.com/MoOx/postcss-cssnext(已废弃，改用postcss-preset-env)
+
+https://github.com/csstools/postcss-preset-env
 
 https://github.com/michael-ciniawsky/postcss-load-config
 
@@ -95,10 +97,10 @@ https://github.com/jonathantneal/postcss-font-magician
 
 然后用一行命令安装它们：
 ```node
-npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-cssnext postcss-nested postcss-font-magician
+npm install --save-dev style-loader css-loader postcss-loader postcss-load-config postcss-import postcss-simple-vars postcss-extend postcss-preset-env postcss-nested postcss-font-magician
 ```
 
-安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested、postcss-cssnext、postcss-mixins、postcss-font-magician这些内容
+安装完后，你会发现在package.json中devDependencies字段增加了style-loader、css-loader、postcss-loader、postcss-load-config、postcss-import、postcss-simple-vars、postcss-extend、postcss-nested、postcss-preset-env、postcss-mixins、postcss-font-magician这些内容
 
 ### PostCSS在webpack中的配置
 
@@ -133,7 +135,7 @@ module.exports = {
     "postcss-extend": {},
     "postcss-nested": {},
     "postcss-mixins": {},
-    "postcss-cssnext": {},
+    "postcss-preset-env": {},
     "postcss-url": { url: 'inline' }
   }
 }
@@ -289,7 +291,7 @@ module.exports = {
     "postcss-extend": {},
     "postcss-nested": {},
     "postcss-mixins": {},
-    "postcss-cssnext": {},
+    "postcss-preset-env": {},
     "postcss-url": { url: 'inline' }
   }
 }
@@ -335,7 +337,7 @@ export default {
 ```
 可以看到文件Hello.vue组件引入样式文件路径，变更为'./hello/hello.css'
 
-### 引入import
+### 引入@import(区别于ES6 import没有@)
 最重要的一点就是如果引用一个以上文件的话，尾部一定加上分号，否则解析不了
 
 ```css
@@ -343,9 +345,11 @@ export default {
 
 @import './common/public.css';
 ```
+###
+[postcss-preset-env](https://preset-env.cssdb.org/) 可以
 
 ### 引入autoprefix
-[postcss-cssnext](http://cssnext.io/) 是一个PostCSS插件，它帮助您使用最新的CSS语法。它将新的CSS规范转换为更兼容的CSS，因此您不需要等待浏览器的支持。您可以编写未来的CSS代码。
+[postcss-cssnext](http://cssnext.io/) (已废弃)是一个PostCSS插件，它帮助您使用最新的CSS语法。它将新的CSS规范转换为更兼容的CSS，因此您不需要等待浏览器的支持。您可以编写未来的CSS代码。
 
 postcss-cssnext插件目前包含了25个特性，以后还会增加：
 1. [autoprefixer](https://github.com/postcss/postcss-custom-properties)
@@ -401,6 +405,11 @@ Note: If, for a really specific reason, postcss-cssnext warnings are irrelevant 
     margin: 10px 0;
 }
 ```
+### postcss-preset-env 替换掉 postcss-cssnext
+[postcss-preset-env](https://preset-env.cssdb.org/)(https://cssdb.org/)
+废弃的过程：https://moox.io/blog/deprecating-cssnext/
+postcss-preset-env 中包含autoprefixer 和browers
+postcss-preset-env默认是stage2
 ### 引入url
 postcss-url插件，是定义了rebase，inline，copy三种模式，在本文中，我们采用inline模式，"postcss-url": { url: 'inline' }
 
